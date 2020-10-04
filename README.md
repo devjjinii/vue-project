@@ -26,10 +26,18 @@ module.exports = {
     arrowParens: 'avoid',
 };
 ```
+##### WebStorm 기준 
 * prettier 설정
     * https://prettier.io/docs/en/options.html 참고
-* ESLint 설정( WebStorm 기준 )
-    * preference -> Languges & Framework -> ESLint
+* ESLint 설정
+    * preference -> Languages & Framework -> ESLint
 <img width="721" alt="스크린샷 2020-10-04 오후 1 38 54" src="https://user-images.githubusercontent.com/53853730/95007132-1afa7b80-0647-11eb-8b59-422ef419d6d8.png">
 <img width="728" alt="스크린샷 2020-10-04 오후 1 39 33" src="https://user-images.githubusercontent.com/53853730/95007135-2057c600-0647-11eb-8392-ff86fc47fc2a.png">
+
+* 절대 경로 사용
+    * 알아서 경로를 잡아 주는 것 같지만, 
+        * 보통 [jsconfig.json] 을 생성해서 잡아준다.
+---
+
+
 
