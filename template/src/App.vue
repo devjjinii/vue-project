@@ -5,13 +5,11 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue';
-import AppHeader from '@/components/common/AppHeader.vue';
 
 export default {
 	name: 'App',
 	components: {
 		HelloWorld,
-		AppHeader,
 	},
 	created() {
 		console.log('hi');

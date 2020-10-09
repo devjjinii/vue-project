@@ -1,9 +1,10 @@
 <template>
-	<div>AppHeader</div>
+	<div>
+		signup
+	</div>
 </template>
 
 <script>
-import Demo from '@/demo/Demo.vue';
-
 export default {};
 </script>
+<style></style>

@@ -38,6 +38,9 @@ module.exports = {
     * 알아서 경로를 잡아 주는 것 같지만, 
         * 보통 [jsconfig.json] 을 생성해서 잡아준다.
 ---
+* 라우터
+    * npm i vue-router@next
+    * https://www.vuemastery.com/blog/vue-router-a-tutorial-for-vue-3/
 
 
 
