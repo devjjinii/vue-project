@@ -1,15 +1,23 @@
 import { createWebHistory, createRouter } from 'vue-router';
-import LoginPage from '@/views/LoginPage';
-import SignupPage from '@/views/SignupPage';
+// import LoginPage from '@/views/LoginPage';
+// import SignupPage from '@/views/SignupPage';  // 코드 스플리팅
 
 const routes = [
 	{
+		path: '/',
+		redirect: '/login',
+	},
+	{
 		path: '/login',
-		component: LoginPage,
+		component: () => import('@/views/LoginPage.vue'),
 	},
 	{
 		path: '/signup',
-		component: SignupPage,
+		component: () => import('@/views/SignupPage.vue'),
+	},
+	{
+		path: '/:pathMatch(.*)*',
+		component: () => import('@/views/PageNotFound.vue'),
 	},
 ];
 

@@ -41,6 +41,6 @@ module.exports = {
 * 라우터
     * npm i vue-router@next
     * https://www.vuemastery.com/blog/vue-router-a-tutorial-for-vue-3/
-
+    * 예외처리 페이지 라우트시 : https://next.router.vuejs.org/guide/migration/#removed-star-or-catch-all-routes
 
 
