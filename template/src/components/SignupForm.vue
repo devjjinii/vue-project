@@ -27,7 +27,7 @@ export default {
 	},
 	methods: {
 		async submitForm() {
-			console.log('submitForm >> 폼 제출');
+			console.log('>> signup');
 			const userData = {
 				username: this.username,
 				password: this.password,

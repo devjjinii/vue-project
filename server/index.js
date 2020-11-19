@@ -26,3 +26,25 @@ app.post('/signup', async(req,res) => {
         console.log(err.message);
     }
 });
+
+app.post('/login',async(req,res) => {
+    try {
+        const username = req.body.username;
+        const password = req.body.password;
+
+        const query = await pool.query("select * from tb_user where username = $1",
+            [username]);
+        if(query.rows[0].password == password) {
+            res.json(query.rows[0]);
+        } else {
+            res.json({
+              "msg" : "fail"
+            })
+        }
+        console.log(query.rows[0].password);
+
+
+    } catch (err) {
+        console.log(err.message);
+    }
+})

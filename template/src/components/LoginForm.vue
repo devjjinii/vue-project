@@ -1,19 +1,52 @@
 <template>
-	<form>
+	<form @submit.prevent="submitForm">
 		<div>
 			<label for="username">id: </label>
-			<input id="username" type="text" />
+			<input id="username" type="text" v-model="username" />
 		</div>
 		<div>
 			<label for="password">pw: </label>
-			<input id="password" type="text" />
+			<input id="password" type="text" v-model="password" />
 		</div>
 		<button type="submit">로그인</button>
+		<p>{{ logMessage }}</p>
 	</form>
 </template>
 
 <script>
-export default {};
+import { loginUser } from '@/api/index';
+
+export default {
+	data() {
+		return {
+			username: '',
+			password: '',
+			logMessage: '',
+		};
+	},
+	methods: {
+		async submitForm() {
+			console.log('>> login');
+			const userData = {
+				username: this.username,
+				password: this.password,
+			};
+			const { data } = await loginUser(userData);
+			console.log(data.username);
+			if (data.username != undefined) {
+				this.logMessage = `${data.username} 님 환영합니다 ~`;
+			} else {
+				this.logMessage = `${data.msg} !!`;
+			}
+
+			this.initForm();
+		},
+		initForm() {
+			this.username = '';
+			this.password = '';
+		},
+	},
+};
 </script>
 
 <style></style>
