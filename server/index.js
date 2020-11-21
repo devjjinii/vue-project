@@ -41,8 +41,6 @@ app.post('/login',async(req,res) => {
               "msg" : "fail"
             })
         }
-        console.log(query.rows[0].password);
-
 
     } catch (err) {
         console.log(err.message);
