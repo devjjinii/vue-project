@@ -41,6 +41,8 @@ export default {
 				password: this.password,
 			};
 			const { data } = await loginUser(userData);
+			// 메인 페이지로 이동
+			this.$router.push('/main');
 			console.log(data);
 			if (data.username != undefined) {
 				this.logMessage = `${data.username} 님 환영합니다 ~`;
